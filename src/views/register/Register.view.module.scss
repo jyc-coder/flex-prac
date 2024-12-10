@@ -1,0 +1,95 @@
+.Container {
+  display: flex;
+  justify-content: center;
+  padding: 65px 0;
+  .Section {
+    &.Member-register {
+      align-items: center;
+      width: 360px;
+      .Member-account {
+        text-align: center;
+        .Login-slogan {
+          font-family: $secondary-kr;
+          font-weight: 600;
+          font-size: 20px;
+
+          em {
+            font-style: normal;
+            color: $royalblue;
+          }
+        }
+      }
+      .Login-field {
+        div {
+          position: relative;
+          margin: 15px 0;
+          input[type="email"],
+          input[type="password"],
+          input[type="text"] {
+            border: 1px solid $dim-gray;
+            width: 100%;
+            padding: 13px;
+            border-radius: 5px;
+            &::placeholder {
+              color: $dark-gray;
+            }
+          }
+          .bi {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+          }
+        }
+        .Btn-member-primary {
+          background-color: $forestgreen;
+          border: none;
+          color: $white;
+          width: 100%;
+          padding: 11px;
+          border-radius: 5px;
+          font-size: 16px;
+        }
+      }
+      .Agreement {
+        text-align: center;
+        font-size: 12px;
+        color: $silver-black;
+        margin: 20px 0;
+        border-bottom: 1px solid $dim-gray;
+        padding-bottom: 20px;
+        label {
+          cursor: pointer;
+          input[type="checkbox"] {
+            display: none;
+
+            &:checked + em::before {
+              content: "\F26D";
+              color: $royalblue;
+              font-size: 14px;
+            }
+          }
+          em::before {
+            content: "\F584";
+            font-family: $bs-font;
+            display: inline-block;
+            font-style: normal;
+            margin-right: 3px;
+            transform: translateY(3px);
+            font-size: 14px;
+            color: $silver-black;
+          }
+        }
+      }
+      .Login-member {
+        text-align: center;
+        font-size: 13px;
+        color: $dim-black;
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

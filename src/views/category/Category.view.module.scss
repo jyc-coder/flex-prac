@@ -1,0 +1,180 @@
+.Section {
+  padding: 65px 0;
+  &.Category-class {
+    .Category-class-inner {
+      .Category-class-main {
+        position: relative;
+        height: 120px;
+
+        h2 {
+          position: absolute;
+          left: 40px;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 28px;
+          color: $white;
+          z-index: 2;
+        }
+      }
+      .Category-class-detail {
+        margin: 30px 0;
+        padding-bottom: 30px;
+        border-bottom: 1px solid $dim-gray;
+        h3 {
+          font-size: 20px;
+          margin-bottom: 15px;
+        }
+        .Category-shortcut {
+          .Btn-shortcut {
+            border: none;
+            font-size: 13px;
+            border-radius: 30px;
+            padding: 5px 15px;
+            margin-right: 8px;
+            background-color: transparent;
+            border: 1px solid $dark-gray;
+
+            &.Active {
+              background-color: $dark-black;
+              color: $white;
+            }
+          }
+        }
+      }
+      .Category-class-sort {
+        * {
+          font-size: 14px;
+          border: 1px solid $silver-gray;
+          cursor: pointer;
+          height: 40px;
+          width: 110px;
+          margin-right: 5px;
+          text-align: center;
+        }
+        margin-bottom: 30px;
+        select {
+          appearance: none;
+          background: url("/static/images/icon-select.svg") no-repeat center
+            right 10px;
+          background-size: 12px;
+        }
+        button {
+          background-color: transparent;
+          border-radius: 3px;
+
+          &.Btn-sort {
+            border-color: $tomato;
+            color: $tomato;
+          }
+        }
+      }
+      .Category-class-wrap {
+        .Focus-class-items {
+          margin-bottom: 50px;
+          .Focus-class-item {
+            cursor: pointer;
+            .Thum {
+              position: relative;
+              height: 160px;
+
+              .Like {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                font-style: normal;
+                cursor: pointer;
+                color: $white;
+                &:before {
+                  content: "\F417";
+                  font-family: $bs-font;
+                }
+                &.Active:before {
+                  content: "\F415";
+                  color: $crimson;
+                }
+              }
+              .Badge {
+                position: absolute;
+                bottom: 10px;
+                right: 0;
+                background-color: $crimson;
+                color: $white;
+                padding: 4px 8px;
+                border-radius: 4px 0 0 4px;
+              }
+            }
+
+            @at-root .Overview {
+              margin-top: 10px;
+              h4 {
+                font-weight: 400;
+              }
+              .Class-info {
+                font-size: 13px;
+                color: $light-black;
+              }
+              .Class-price {
+                font-size: 16px;
+                display: flex;
+                gap: 10px;
+                margin-bottom: 3px;
+                .Sale {
+                  color: $crimson;
+                  font-weight: 400;
+                }
+                .Price-prev {
+                  text-decoration: line-through;
+                  color: $dim-gray;
+                }
+                .Price-current {
+                  font-weight: 400;
+                }
+              }
+              .Class-review {
+                font-size: 12px;
+                font-weight: 400;
+                .Star {
+                  margin-right: 5px;
+                  .bi {
+                    color: $orange;
+                  }
+                }
+                .Rating {
+                  &:after {
+                    content: "|";
+                    font-size: 10px;
+                    margin: 0 5px;
+                    display: inline-block;
+                    transform: translateY(-2px);
+                  }
+                }
+                .Trainee {
+                }
+              }
+            }
+          }
+        }
+      }
+      .Paging {
+        display: flex;
+        font-size: 18px;
+        justify-content: center;
+        button {
+          background-color: transparent;
+          border: none;
+        }
+        .Btn-paging-group {
+          transform: translateY(-4px);
+          .Btn-paging {
+            margin: 0 10px;
+            &.Active {
+              background-color: $dark-black;
+              border-radius: 3px;
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

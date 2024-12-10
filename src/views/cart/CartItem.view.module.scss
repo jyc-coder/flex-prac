@@ -1,0 +1,258 @@
+.Section {
+  padding: 65px 0;
+  background-color: $light-gray;
+  &.Take-course {
+    .Take-course-inner {
+      display: flex;
+      gap: 30px;
+      > div {
+        background-color: $white;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba($black, 0.05);
+        padding: 30px;
+      }
+
+      .Cart-wrap {
+        flex: 1;
+        @at-root .Payment-headline {
+          font-size: 20px;
+          margin-bottom: 20px;
+        }
+        .Cart-header {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 15px;
+          border-bottom: 1px solid $silver-gray;
+          padding-bottom: 15px;
+          span {
+            font-weight: 400;
+            .Cart-check {
+              width: 18px;
+              height: 18px;
+              accent-color: $orangered;
+              vertical-align: middle;
+              transform: translateY(-1px);
+              margin-right: 5px;
+            }
+
+            em {
+              font-style: normal;
+              color: $orangered;
+            }
+          }
+          .Btn-all-clear {
+            font-size: 13px;
+            border: 1px solid $dim-gray;
+            background-color: transparent;
+            border-radius: 3px;
+          }
+        }
+
+        .Cart-items {
+          .Cart-item {
+            display: flex;
+
+            border-bottom: 1px solid $dim-gray;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+
+            &:last-child {
+              border-bottom: none;
+              padding-bottom: 0;
+              margin-bottom: 0;
+            }
+
+            .Check-status {
+              width: 30px;
+              input[type="checkbox"] {
+                width: 18px;
+                height: 18px;
+                accent-color: $orangered;
+                vertical-align: middle;
+                transform: translateY(-1px);
+                margin-right: 5px;
+              }
+            }
+            .Thum {
+              width: 160px;
+              position: relative;
+            }
+            .Cart-overview {
+              flex: 1;
+              padding-left: 10px;
+              .Cart-overview-header {
+                display: flex;
+                justify-content: space-between;
+                h4 {
+                  font-size: 14px;
+                  color: $crimson;
+                  font-weight: 400;
+                }
+                .Btn-clear {
+                  cursor: pointer;
+                  border: none;
+                  background-color: transparent;
+                  font-size: 1.1em;
+                  color: $light-black;
+                }
+              }
+
+              .Cart-overview-detail {
+                display: flex;
+                gap: 15px;
+                .Cart-overview-info {
+                  flex: 4;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between;
+                  min-height: 75px;
+                  .Class-subject {
+                    font-size: 14px;
+                    font-weight: 500;
+                  }
+                  .Mentor-info {
+                    display: block;
+                    font-size: 13px;
+                    color: $light-black;
+                    em {
+                      font-style: normal;
+                      color: $forestgreen;
+                    }
+                  }
+                }
+                .Cart-overview-price {
+                  flex: 2;
+                  text-align: right;
+
+                  .Sale {
+                    color: $orangered;
+                  }
+
+                  .Price-prev {
+                    text-decoration: line-through;
+                    color: $light-black;
+                  }
+                  .Price-current {
+                    font-size: 16px;
+                    font-weight: 500;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .Payment {
+        width: 330px;
+        height: 620px;
+        font-size: 16px;
+        > div {
+          margin-bottom: 20px;
+        }
+        .Price-total-wrap {
+          > div {
+            display: flex;
+            justify-content: space-between;
+
+            b {
+              font-weight: 400;
+            }
+          }
+          .Current-price {
+            border-bottom: 1px solid $silver-gray;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            span {
+              em {
+                font-style: normal;
+                color: $forestgreen;
+                font-size: 20px;
+              }
+            }
+          }
+          .Origin-price {
+            b {
+            }
+            span {
+            }
+          }
+          .Discount-amount {
+            b {
+            }
+            span {
+              em {
+                color: $orangered;
+                font-style: normal;
+              }
+            }
+          }
+        }
+        .Mobile-confirm-wrap {
+          .Phone-form {
+            display: flex;
+            gap: 5px;
+            input[type="tel"] {
+              flex: 3;
+              border: 1px solid $silver-gray;
+              border-radius: 3px;
+              padding: 5px;
+              &::placeholder {
+                font-size: 12px;
+                color: $light-black;
+              }
+            }
+            .Btn-request {
+              flex: 1;
+              border: 1px solid $dim-gray;
+              background-color: transparent;
+              border-radius: 3px;
+              padding: 5px;
+            }
+          }
+        }
+
+        .Payment-method-wrap {
+          > div {
+            .Free-interest {
+              font-size: 12px;
+              font-weight: 400;
+              color: $orangered;
+              margin-left: 3px;
+            }
+            margin-bottom: 5px;
+            label {
+              cursor: pointer;
+              input[type="radio"] {
+                display: none;
+                + em {
+                  display: inline-block;
+                  width: 20px;
+                  height: 20px;
+                  margin-right: 3px;
+                  transform: translateY(4px);
+                  background: url("/static/images/icon-custom-radio.png")
+                    no-repeat;
+                  background-position: left;
+                }
+                &:checked + em {
+                  background-position: right;
+                }
+              }
+            }
+          }
+        }
+
+        .Btn-payment-final {
+          background-color: $orangered;
+          border: none;
+          width: 100%;
+          padding: 10px;
+          font-size: 16px;
+          color: $white;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}
