@@ -8,15 +8,12 @@
   [class*="inner"] {
     width: 1160px;
     margin: auto;
+
+    @media screen and (max-width: 375px) {
+      width: 100%;
+    }
   }
 }
-
-/* remain SCSS List */
-
-// .Early-bird,
-// .Blog,
-// .Slogan,
-// .Tip-tech,
 
 .Header {
   display: flex;
@@ -41,7 +38,6 @@
       }
       .Search {
         width: 520px;
-
         position: relative;
         input[type="search"] {
           width: 100%;
@@ -194,6 +190,7 @@
   }
 }
 .Section {
+  display: none !important;
   &:not(.Front-slider) {
     padding: 65px 0;
   }

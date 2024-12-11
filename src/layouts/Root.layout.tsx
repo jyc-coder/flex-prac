@@ -96,13 +96,15 @@ const BeyondInsightRootLayout = (props: React.PropsWithChildren) => {
           </div>
           <div className={cx("Gnb")}>
             <a href="#none" className={cx("Trigger")}>
-              전체 카테고리
+              <span>전체 카테고리</span>
             </a>
-            <a href="#none">베스트 클래스</a>
-            <a href="#none">이벤트</a>
-            <a href="#none">새로운 클래스</a>
-            <a href="#none">신규 회원 혜택</a>
-            <a href="#none">시그니쳐 클래스</a>
+            <div className={cx("Link-list")}>
+              <a href="#none">베스트 클래스</a>
+              <a href="#none">이벤트</a>
+              <a href="#none">새로운 클래스</a>
+              <a href="#none">신규 회원 혜택</a>
+              <a href="#none">시그니쳐 클래스</a>
+            </div>
           </div>
         </div>
 

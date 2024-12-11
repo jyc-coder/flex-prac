@@ -8,6 +8,10 @@
   [class*="inner"] {
     width: 1160px;
     margin: auto;
+
+    @media screen and (max-width: 375px) {
+      width: 100%;
+    }
   }
 }
 
@@ -33,6 +37,9 @@
       .Logo {
       }
       .Search {
+        @media screen and (max-width: 375px) {
+          display: none;
+        }
         width: 520px;
 
         position: relative;
@@ -122,9 +129,21 @@
       display: flex;
       align-items: center;
       gap: 10px;
+
+      .Link-list {
+        width: 360px;
+        overflow-y: hidden;
+        white-space: nowrap;
+      }
       a {
         font-weight: 400;
         color: $dim-black;
+
+        @media screen and (max-width: 375px) {
+          &:first-child:after {
+            display: none;
+          }
+        }
 
         &:after {
           content: "·";
@@ -138,6 +157,11 @@
         }
       }
       .Trigger {
+        span {
+          @media screen and (max-width: 375px) {
+            display: none;
+          }
+        }
         &:before {
           content: "";
           background: url("/static/images/icon-category.png");
@@ -146,6 +170,11 @@
           display: inline-block;
           margin-right: 5px;
           transform: translateY(4px);
+
+          @media screen and (max-width: 375px) {
+            background: url("/static/images/icon-category-search.png");
+            transform: translateY(2px);
+          }
         }
       }
     }
@@ -192,30 +221,65 @@
   padding: 60px 0;
   color: $dark-gray;
   font-size: 13px;
+  @media screen and (max-width: 375px) {
+    padding: 30px 0;
+  }
   .Footer-inner {
     .Lnb-wrap {
       display: flex;
       gap: 100px;
       border-bottom: 1px solid $silver-black;
       padding-bottom: 40px;
+      @media screen and (max-width: 375px) {
+        flex-direction: column;
+      }
       .Footer-slogan {
         h2 {
           color: $silver-gray;
           font-family: $secondary-kr;
+
+          @media screen and (max-width: 375px) {
+            text-align: center;
+            font-size: 2.6em;
+            color: $white;
+          }
         }
       }
       .Lnb {
         display: flex;
         width: 100%;
         justify-content: space-between;
-
+        @media screen and (max-width: 375px) {
+          flex-direction: column;
+        }
         .Link-item {
           flex: 1;
           .Link-item-title {
             color: $silver-gray;
+
+            @media screen and (max-width: 375px) {
+              padding: 10px 0;
+              border: 1px solid $silver-black;
+              border-right: 0;
+              border-left: 0;
+              display: flex;
+              align-items: center;
+              &:after {
+                content: "\f282";
+                font-family: $bs-font;
+                margin-left: auto;
+              }
+            }
           }
           .Link-item-content {
+            @media screen and (max-width: 375px) {
+              padding: 5px 0;
+            }
             a {
+              @media screen and (max-width: 375px) {
+                padding: 3px 0;
+              }
+
               display: block;
               &:hover {
                 text-decoration: underline;
@@ -229,6 +293,11 @@
       padding-top: 40px;
       display: flex;
       justify-content: space-between;
+
+      @media screen and (max-width: 375px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
       align-items: center;
       address {
         font-style: normal;
